@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import { ListGroup } from "react-bootstrap";
+
 const BalanceShow = (props) => {
-  const [accountKey, setAccountKey] = useState("");
   const [assetBalance, setAssetBalance] = useState(0);
   const [cashBalance, setCashBalance] = useState(0);
 
@@ -11,7 +12,7 @@ const BalanceShow = (props) => {
       .post(
         "https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/balance",
         {
-          accountKey: "554fd8be-b1dd-4430-b150-4d3335ef8427",
+          accountKey: props.accountKey,
         },
         {
           headers: {
@@ -23,17 +24,16 @@ const BalanceShow = (props) => {
       .then((res) => {
         console.log(res.data);
         const data = res.data;
-        setAccountKey(data.accountKey);
         setAssetBalance(data.assetBalance);
         setCashBalance(data.cashBalance);
       });
   }, []);
 
   return (
-    <div>
-      <p>Cash Balance: ${cashBalance.toFixed(2)}</p>
-      <p>Asset Balance: {assetBalance}</p>
-    </div>
+    <ListGroup horizontal>
+      <ListGroup.Item>Cash Balance: ${cashBalance.toFixed(2)}</ListGroup.Item>
+      <ListGroup.Item>Asset Balance: {assetBalance}</ListGroup.Item>
+    </ListGroup>
   );
 };
 
