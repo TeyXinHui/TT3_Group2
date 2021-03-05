@@ -2,8 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import Asset from "../model/asset";
-
-class Transaction extends React.Component {
+class BuySell extends React.Component {
     constructor(props) {
         super(props);
         this.assetapi = new Asset();
@@ -13,9 +12,11 @@ class Transaction extends React.Component {
             amount: 0,
         };
     }
+
     componentDidMount() {
         this.init();
     }
+
     init() {
         // get wallet amount
         this.user = JSON.parse(localStorage.getItem("user"));
@@ -26,9 +27,11 @@ class Transaction extends React.Component {
             });
         });
     }
+
     render() {
         return (
             <Container>
+                <h1>Buy/Sell Assets</h1>
                 <Row style={{ marginTop: "100px" }}>
                     <Col style={{ textAlign: "center" }}>ASSET BALANCE</Col>
                     <Col style={{ textAlign: "center" }}>CASH BALANCE</Col>
@@ -114,4 +117,5 @@ class Transaction extends React.Component {
         );
     }
 }
-export default withRouter(Transaction);
+
+export default BuySell;
