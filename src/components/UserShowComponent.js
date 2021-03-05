@@ -1,20 +1,24 @@
-import React from "react";
+import { Card } from "react-bootstrap";
 
 const UserShow = (props) => {
+  // note: this is a dumb component, pass "user" props in to use
+  // json object returned from techtrek/login endpoint
+  const user = props.user;
 
-    // note: this is a dumb component, pass "user" props in to use 
-    // json object returned from techtrek/login endpoint
-
-    return(
-    <div>
-        <h2>{props.user.username}</h2>
-        <p>Full name: {props.user.lastName}, {props.user.firstName}</p>
-        <p>NRIC: {props.user.nric}</p>
-        <p>Email: {props.user.email}</p>
-        <p>Phone number: {props.user.phoneNumber}</p>
-        <p>Address: {props.user.address}</p>
-    </div>
-    )
-}
+  return (
+    <Card>
+      <Card.Header as="h4">Welcome, {user.username}</Card.Header>
+      <Card.Body>
+        <Card.Title>
+          {user.firstName}, {user.lastName}
+        </Card.Title>
+        <Card.Text>NRIC: {user.nric}</Card.Text>
+        <Card.Text>Email: {user.email}</Card.Text>
+        <Card.Text>Phone number: {user.phoneNumber}</Card.Text>
+        <Card.Text>Address: {user.address}</Card.Text>
+      </Card.Body>
+    </Card>
+  );
+};
 
 export default UserShow;
