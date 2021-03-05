@@ -1,7 +1,7 @@
 import React from 'react';
-import "./PriceshowComponent.css"
+import "./PriceShowComponent.css"
 
-class Priceshow extends React.Component {
+class PriceShow extends React.Component {
 
     constructor(){
         super();
@@ -80,4 +80,4 @@ class Priceshow extends React.Component {
     }
 }
 
-export default Priceshow;
+export default PriceShow;
