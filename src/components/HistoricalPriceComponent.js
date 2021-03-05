@@ -1,4 +1,6 @@
 import axios from "axios";
+import React from "react";
+import ReactTable from "react-table";
 
 const API_URL =
   "https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/historical";
