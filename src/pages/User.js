@@ -18,7 +18,7 @@ const User = (props) => {
     <div>
       <UserShowComponent user={user} />
       <BalanceShowComponent accountKey={user.accountKey} />
-      <HistoricalPriceComponent historicalPrice={HistoricalPriceComponent} />
+      <HistoricalPriceComponent />
     </div>
   );
 };
