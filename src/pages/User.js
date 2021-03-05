@@ -1,5 +1,5 @@
-import UserShow from "../components/UserShow";
-import BalanceShow from "../components/BalanceShow";
+import UserShowComponent from "../components/UserShowComponent";
+import BalanceShowComponent from "../components/BalanceShowComponent";
 
 const User = (props) => {
   const user = {
@@ -15,8 +15,8 @@ const User = (props) => {
 
   return (
     <div>
-      <UserShow user={user} />
-      <BalanceShow accountKey={user.accountKey} />
+      <UserShowComponent user={user} />
+      <BalanceShowComponent accountKey={user.accountKey} />
     </div>
   );
 };
