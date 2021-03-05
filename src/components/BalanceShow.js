@@ -32,7 +32,7 @@ const BalanceShow = (props) => {
   return (
     <div>
       <p>Cash Balance: ${cashBalance.toFixed(2)}</p>
-      <p>Asset Balance: ${assetBalance.toFixed(2)}</p>
+      <p>Asset Balance: {assetBalance}</p>
     </div>
   );
 };
