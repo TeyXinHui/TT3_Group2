@@ -1,5 +1,6 @@
 import UserShowComponent from "../components/UserShowComponent";
 import BalanceShowComponent from "../components/BalanceShowComponent";
+import HistoricalPriceComponent from "../components/HistoricalPriceComponent";
 
 const User = (props) => {
   const user = {
@@ -17,6 +18,7 @@ const User = (props) => {
     <div>
       <UserShowComponent user={user} />
       <BalanceShowComponent accountKey={user.accountKey} />
+      <HistoricalPriceComponent historicalPrice={HistoricalPriceComponent}/>
     </div>
   );
 };
