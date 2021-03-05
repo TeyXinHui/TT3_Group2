@@ -13,10 +13,6 @@ class BuySell extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.init();
-  }
-
   init() {
     // get wallet amount
     this.user = JSON.parse(localStorage.getItem("user"));
