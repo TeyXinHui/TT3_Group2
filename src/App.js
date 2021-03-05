@@ -1,9 +1,10 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import transaction from "./pages/transaction";
-import PricePage from "./pages/PricePage";
-import User from "./pages/User";
+
+import login from "./pages/login";
+import TransactionPage from "./pages/TransactionPage";
+import UserShow from "./components/UserShowComponent";
 
 // function myUserShow() {
 //   const user = {
@@ -23,9 +24,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route exact path="/price" component={PricePage} />
-        <Route exact path="/transaction" component={transaction} />
-        <Route exact path="/user" component={User} />
+        <Route exact path="/login" component={login} />
+        <Route exact path="/transaction" component={TransactionPage} />
+        <Route exact path="/user" component={myUserShow} />
       </Router>
     </div>
   );
