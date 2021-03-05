@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import login from "./pages/login";
 import TransactionPage from "./pages/TransactionPage";
-import UserShow from "./components/UserShowComponent";
+import User from "./pages/User";
 
 // function myUserShow() {
 //   const user = {
@@ -26,7 +26,7 @@ function App() {
       <Router>
         <Route exact path="/login" component={login} />
         <Route exact path="/transaction" component={TransactionPage} />
-        <Route exact path="/user" component={myUserShow} />
+        <Route exact path="/user" component={User} />
       </Router>
     </div>
   );
