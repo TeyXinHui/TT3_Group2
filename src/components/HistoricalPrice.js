@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL =
   "https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/historical";
 
-class HistoricalPrice extends React.Component {
+class HistoricalPriceComponent extends React.Component {
   constructor() {
     super();
 
@@ -66,4 +66,4 @@ class HistoricalPrice extends React.Component {
   }
 }
 
-export default new HistoricalPrice();
+export default HistoricalPriceComponent;
