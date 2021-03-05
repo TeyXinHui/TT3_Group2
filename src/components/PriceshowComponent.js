@@ -1,7 +1,7 @@
-import React,{Component} from 'react';
+import React from 'react';
 import "./PriceshowComponent.css"
 
-class Priceshow extends Component {
+class Priceshow extends React.Component {
 
     constructor(){
         super();
