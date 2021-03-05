@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import TransactionPage from "./pages/TransactionPage"
-import UserShow from "./components/UserShow";
+import UserShow from "./components/UserShowComponent";
 
 function myUserShow() {
   const user = {
